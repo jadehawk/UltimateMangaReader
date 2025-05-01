@@ -56,6 +56,9 @@ jobs:
         name: toolchain
         # Destination path
         path: ~/x-tools
+    - name: Missing libtool
+      run: |
+        sudo apt install libtool-bin libtool-doc
     - name: OpenSSL
       run: |
         chmod -R 777 ~/x-tools
