@@ -30,7 +30,7 @@ jobs:
           ./koxtoolchain/gen-tc.sh kobo > /dev/null
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.0
+        uses: actions/upload-artifact@v4
         with:
           # Artifact name
           name: toolchain
@@ -50,7 +50,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Download toolchain
-      uses: actions/download-artifact@v2.0.5
+      uses: actions/download-artifact@v4
       with:
         # Artifact name
         name: toolchain
@@ -100,7 +100,7 @@ jobs:
          
     
     - name: Upload the updated toolchain (openssl,...)
-      uses: actions/upload-artifact@v2.2.0
+      uses: actions/upload-artifact@v4
       with:
         # Artifact name
         name: toolchain
@@ -111,7 +111,7 @@ jobs:
         # Duration after which artifact will expire in days. 0 means using default retention.
         #retention-days: # optional     
     - name: Upload Qt
-      uses: actions/upload-artifact@v2.2.0
+      uses: actions/upload-artifact@v4
       with:
         # Artifact name
         name: qt
