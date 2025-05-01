@@ -21,7 +21,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: prerequiesties
-        run: sudo apt-get install build-essential gperf help2man bison texinfo flex gawk autoconf automake wget curl file libncurses-dev
+        run: sudo apt-get install build-essential gperf help2man bison texinfo flex gawk autoconf automake wget curl file libncurses-dev libtool-bin libtool-doc
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -56,9 +56,6 @@ jobs:
         name: toolchain
         # Destination path
         path: ~/x-tools
-    - name: Missing libtool
-      run: |
-        sudo apt install libtool-bin libtool-doc
     - name: OpenSSL
       run: |
         chmod -R 777 ~/x-tools
