@@ -27,7 +27,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git clone https://github.com/koreader/koxtoolchain 
-          ./koxtoolchain/gen-tc.sh kobo > /dev/null
+          ./koxtoolchain/gen-tc.sh kobov5 > /dev/null
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
